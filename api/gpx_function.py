@@ -140,5 +140,10 @@ def analyze_gpx_data(gpx_file_content):
         "total_time_seconds": int(total_time_seconds),
         "fuel_efficiency_kml": round(fuel_efficiency_kml, 2),
         "braking_events": json.dumps(braking_events),
-        "speed_distribution": json.dumps(speed_distribution)
+        "speed_distribution": {
+            f"{b}-{b+bin_size}": {
+                "distance_km": round(bin_dist[b] / 1000, 2),
+                "time_seconds": int(bin_time[b])}
+            for b in sorted(bin_dist.keys())
+        }
     }
