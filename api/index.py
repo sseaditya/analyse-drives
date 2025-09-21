@@ -8,8 +8,8 @@ from functools import wraps
 
 # --- Initialization ---
 app = Flask(__name__)
-url: str = os.environ.get("https://fdujrbmufqmpfisscclk.supabase.co")
-key: str = os.environ.get("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZkdWpyYm11ZnFtcGZpc3NjY2xrIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NjgzNDU5MCwiZXhwIjoyMDcyNDEwNTkwfQ.b-vfRYY416A5hKB7V1DKvtiOw8ga7Y6ALGuJ2SXlBdA") # Use the secure service role key
+url: str = os.environ.get("SUPABASE_URL")
+key: str = os.environ.get("SUPABASE_SERVICE_KEY") # Use the secure service role key
 supabase: Client = create_client(url, key)
 
 # --- Authentication Decorator ---
