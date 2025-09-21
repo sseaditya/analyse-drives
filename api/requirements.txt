@@ -1,0 +1,4 @@
+Flask
+supabase
+gpxpy
+python-dotenv
