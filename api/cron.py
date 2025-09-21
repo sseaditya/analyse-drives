@@ -3,7 +3,7 @@
 import os
 from flask import Flask, request, jsonify
 from supabase import create_client, Client
-from gpx_function import analyze_gpx_data # Import the refactored function
+from .gpx_function import analyze_gpx_data # Import the refactored function
 
 # --- Initializations ---
 app = Flask(__name__)
