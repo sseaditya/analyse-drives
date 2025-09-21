@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify
 from supabase import create_client, Client
 from gpx_function import analyze_gpx_data # Import the refactored function
 
-# --- Initialization ---
+# --- Initializations ---
 app = Flask(__name__)
 url: str = os.environ.get("SUPABASE_URL")
 key: str = os.environ.get("SUPABASE_SERVICE_KEY")
